@@ -1,324 +1,464 @@
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot');
-  src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans'),
-       local('Noto-Sans-regular'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff') format('woff'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans') format('svg');
+/* --------------------------------------------------------- */
+/*                            Calc4Chem                               */
+/* --------------------------------------------------------- */
+
+#calc4chem {
+	position: relative;
+	top: 15px;
+	width: 529px;
+	height: 377px;
+ 	margin: auto;
+	border: 3px outset;
+	background: #e4e4e4;
+	text-align: center;
+	color: #eee;
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot');
-  src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Bold'),
-       local('Noto-Sans-700'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff') format('woff'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans') format('svg');
+#kalkulator {
+ position: absolute;
+ top: 3px;
+ left: 3px;
+ width: 257px;
+ height: 365px;
+ border: 0px ridge #f00;
+ background: #e4e4e4;
+ color: #fff;
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 400;
-  font-style: italic;
-  src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot');
-  src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Italic'),
-       local('Noto-Sans-italic'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff') format('woff'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans') format('svg');
+#biljeska {
+ position: absolute;
+ top: 3px;
+ left: 267px;
+ width: 256px;
+ height: 365px;
+ border: 0px ridge #999;
+ background: #e4e4e4;
+ color: #fff;
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  font-weight: 700;
-  font-style: italic;
-  src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot');
-  src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Bold Italic'),
-       local('Noto-Sans-700italic'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff') format('woff'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
+#konstante  {
+ position: absolute;
+ top: 13px;
+ left: 275px;
+ width: 245px;
+ height: 350px;
+ border: 1px ridge #999;
+ background: #fff;
+ color: #fff;
+ display: none;
+ /*visibility: hidden;    visible hidden */
+ text-align: center;
+ overflow: auto;
 }
 
-body {
-  background-color: #fff;
-  padding:50px;
-  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#727272;
-  font-weight:400;
+#numformat {
+ position: absolute;
+ top: 138px;
+ left: 3px;
+ width: 245px;
+ height: 225px;
+ border: 1px ridge #999;
+ display: none;
+ background: #e4e4e4; 
+ color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
+.constnaslov {
+	width: 200px;
+	color: #00f;
+	text-align: center;
+	font: normal 12px/125% sans-serif;
+	margin: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px #cacaba solid; 
+}
+.const {
+	width: 200px;
+	text-align: center;
+	font: 11px/125% sans-serif;
+	margin: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px #cacaba solid; 
+}
+.const a:link {
+	display: block;
+	color: #900;
+	text-decoration: none;
+}
+.const a:visited {
+	display: block;
+	color: #036;
+	text-decoration: none;
+}
+.const a:active {
+	display: block;
+	color: #900;
+	text-decoration: none;
+}
+.const a:hover {
+	display: block;
+	background: #eaeafa;
+	color: #900;
+	text-decoration: none;
 }
 
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+
+.crta {
+ position: absolute;
+ top: 0px;
+ left: 262px;
+ width: 2px;
+ height: 372px;
+ border: 2px inset;
+ background: #fff;  /* groove ridge */
+ color: #fff;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
+.tipkovnica {
+ position: absolute;
+ top: 138px;
+ left: 5px;
+ width: 245px;
+ height: 228px;
+ background: #e4e4e4;
 }
 
-h1 {
-  font-size:28px;
+.displej {
+ position: absolute;
+ top: 10px;
+ left: 6px;
+ width: 240px;
+ height: 82px;
+ border: 2px ridge #eee;
+ background: #eee;
 }
 
-h2 {
-  color:#393939;
+#numauto, #numsci, #numfix, #nummem, #numrad, #numdeg, #numgrad {
+ position: absolute;
+ margin-top: 2px;
+ width: 26px;
+ height: 10px;
+ font: normal 9px sans-serif;
+ color: #ccc;
+ display: inline;
+ border: 0px solid #e00;
+ background: #eee;
 }
 
-h3, h4, h5, h6 {
-  color:#494949;
+#numauto {
+left: 5px;
+color: #000;
+}
+#numsci {
+left: 37px;
+}
+#numfix {
+left: 62px;
+}
+#nummem {
+left: 107px;
+}
+#numrad {
+left: 154px;
+color: #000;
+}
+#numdeg {
+left: 180px;
+}
+#numgrad {
+left: 205px;
 }
 
-a {
-  color:#39c;
-  text-decoration:none;
+.upit {
+ position: absolute;
+ top: 27px;
+ left: 6px;
+ width: 225px;
+ height: 25px;
+ border: 0px;
+ background: #eee;
+ text-align: left;
+ font: normal 9pt sans-serif;
+ letter-spacing: 1px;
+ color: #0a0;
 }
 
-a:hover {
-  color:#069;
+.rezultat {
+ position: absolute;
+ top: 52px;
+ left: 6px;
+ width: 225px;
+ height: 25px;
+ border: 0px;
+ background: #eee;
+ text-align: right;
+ font: bold 12pt sans-serif;
+ letter-spacing: 1px;
+ color: #00a;
 }
 
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.3em;
-  display:block;
+.formatbr {
+ position: absolute;
+ top: 35px;
+ left: 12px;
+ width: 220px;
+ height: 95px;
+ border: 1px solid #cdcdcd;
+ background: #e8e8e8;
+}
+.formatnaslov {
+ position: relative;
+ margin-top: 5px;
+ font: normal 12pt cursive;
+ text-align: center;
 }
 
-a:hover small {
-  color:#777;
+.automatik, .scienc, .fiksed   {
+ position: absolute;
+ left: 6px;
+ font: normal 10pt sans-serif;
+}
+.automatik {top: 10px;}
+.scienc {top: 38px;}
+.fiksed {top: 66px;}
+
+.decnaslov {
+ position: absolute;
+ top: 10px;
+ left: 110px;
+ width: 110px;
+ text-align: center;
+ font: normal 10pt sans-serif;
+ color: #000;
+ border: 0px solid #cdcdcd;
+}
+.decimal {
+ position: absolute;
+ top: 32px;
+ left: 136px;
+ width: 60px;
+ height: 22px;
+}
+.separator {
+ position: absolute;
+ top: 70px;
+ left: 65px;
+ width: 150px;
+ text-align: right;
+ font: normal 10pt sans-serif;
+ color: #000;
+ border: 0px solid #cdcdcd;
+ }
+ 
+.rad {
+ position: absolute;
+ top: 140px;
+ left: 12px;
+ width: 220px;
+ height: 21px;
+ border: 1px solid #cdcdcd;
+ background: #e8e8e8;
 }
 
-.wrapper {
-  width:860px;
-  margin:0 auto;
+.deg {
+ position: relative;
+ margin: 4px;
+ top: -1px;
+ font: normal 10pt sans-serif;
 }
 
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+.cls {
+ position: absolute;
+ top: 103px;
+ left: 217px;
+ width: 30px;
+ height: 22px;
+ color: #f00;
+ display: none;
 }
 
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
-  font-size:12px;
+.zadatak {
+ position: absolute;
+ top: 98px;
+ left: 6px;
+ width: 240px;
+ height: 28px;
+ border: 2px groove #eee;
+ background: #fff;
 }
 
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
+.unos {
+ position: absolute;
+ top: 1px;
+ left: 4px;
+ width: 228px;
+ height: 23px;
+ border: 0px;
+ font: bold 10pt cursive;
+ color: #060;
 }
 
-table {
-  width:100%;
-  border-collapse:collapse;
+
+.tekstarea {
+ position: absolute;
+ top: 10px;
+ left: 8px;
+ width: 238px;
+ height: 317px;
+ padding: 0px 0px 0px 5px;
+ border: 2px groove #ccc;
+ background: #fff;  /*plavo*/
+ font: normal 9pt/150% monospace;
+ color: #345678;
+ overflow: auto;
 }
 
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+.n1, .n2, .n3, .n4  {
+ position: absolute;
+ top: 340px;
+ height: 24px;
+ width: 80px;
+ font: normal 9pt sans-serif;
+ color: #000;
+ }
+
+.n1   {
+ left: 8px; 
+}
+.n2   {
+ left: 91px; 
+}
+.n3   {
+ left: 174px; 
+}
+.n4   {
+ top: 174px;
+ left: 85px; 
+}
+.n2copy   {
+ position: absolute;
+ left: 0px;
+ top: 206px;
+ width: 242px;
+ color: #aaa;
+ font: normal 9pt sans-serif;
+ text-align: center;
 }
 
-dt {
-  color:#444;
-  font-weight:700;
+.b11, .b12, .b13, .b14, .b15, .b16, .b21, .b22, .b23, .b24, .b25, .b26, .b31, .b32, .b33, .b34, .b35, .b36 {
+ position: absolute;
+ height: 25px;
+ width: 40px;
+ padding: 0px;
+ color: #000;
+ font: normal 10pt monospace;
+ }
+
+.b41, .b42, .b43, .b44, .b45, .b46, .b51, .b52, .b53, .b54, .b55, .b56, .b61, .b62, .b63, .b64, .b65, .b66, .b71, .b72, .b73, .b74, .b75, .b76 {
+ position: absolute;
+ height: 35px;
+ width: 40px;
+ padding: 0px;
+ color: #000;
 }
 
-th {
-  color:#444;
+.b55, .b75   {
+ position: absolute;
+ height: 35px;
+ width: 81px;
+ font: normal 10pt sans-serif;
+ color: #000;
+ }
+ 
+.b75   {
+ position: absolute;
+ height: 35px;
+ width: 81px;
+ font: normal 15pt sans-serif;
+ color: #050;
+ }
+ 
+.b45, .b46 {
+ font: normal 10pt sans-serif;
+ color: #a00;
+ }
+ 
+ .b34 {
+ font: normal 10pt sans-serif;
+ }
+ 
+.b44, .b54, .b74 {
+ font: bold 13pt sans-serif;
+ color: #00f;
+ }
+.b64 {
+ font: normal 15pt serif;
+ color: #00f;
+ }
+ 
+.b41, .b42, .b43, .b51, .b52, .b53, .b61, .b62, .b63, .b71, .b72 {
+ font: normal 12pt cursive;
+ color: #575;
+ }
+ 
+.b11, .b12, .b13, .b14, .b15, .b16 {
+top: 0px;
 }
 
-img {
-  max-width:100%;
+.b21, .b22, .b23, .b24, .b25, .b26 {
+top: 26px;
 }
 
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-  -webkit-font-smoothing:subpixel-antialiased;
+.b31, .b32, .b33, .b34, .b35, .b36 {
+top: 52px;
 }
 
-header ul {
-  list-style:none;
-  height:40px;
-  padding:0;
-  background: #f4f4f4;
-  border-radius:5px;
-  border:1px solid #e0e0e0;
-  width:270px;
+.b41, .b42, .b43, .b44, .b45, .b46  {
+top: 85px;
 }
 
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #e0e0e0;
-  height:40px;
+.b51, .b52, .b53, .b54, .b55, .b56  {
+top: 121px;
 }
 
-header li:first-child a {
-  border-radius:5px 0 0 5px;
+.b61, .b62, .b63, .b64, .b65, .b66  {
+top: 156px;
 }
 
-header li:last-child a {
-  border-radius:0 5px 5px 0;
+.b71, .b72, .b73, .b74, .b75, .b76  {
+top: 192px;
 }
 
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:34px;
+
+.b11, .b21, .b31, .b41, .b51, .b61, .b71 {
+left: 0px
 }
 
-header ul a:hover {
-  color:#999;
+.b12, .b22, .b32, .b42, .b52, .b62, .b72 {
+left: 41px
 }
 
-header ul a:active {
-  background-color:#f0f0f0;
+.b13, .b23, .b33, .b43, .b53, .b63, .b73 {
+left: 82px
 }
 
-strong {
-  color:#222;
-  font-weight:700;
+.b14, .b24, .b34, .b44, .b54, .b64, .b74 {
+left: 123px
 }
 
-header ul li + li + li {
-  border-right:none;
-  width:89px;
+.b15, .b25, .b35, .b45, .b55, .b65, .b75 {
+left: 164px
 }
 
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
+.b16, .b26, .b36, .b46, .b56, .b66, .b76 {
+left: 205px
 }
 
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
+/*                     END of  Calc4Chem                       */
+/* --------------------------------------------------------- */
 
-small {
-  font-size:11px;
-}
 
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
-}
 
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
+/*Eni Generalic, Split, Create: 1999/10/14; Update: 2008/02/27   */
+/* Copyright © 2008 by EniG.   */
 
-@media print, screen and (max-width: 960px) {
-
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-
-  header {
-    padding-right:320px;
-  }
-
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
-}
-
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-
-  header {
-    padding:0;
-  }
-
-  header ul, header p.view {
-    position:static;
-  }
-
-  pre, code {
-    word-wrap:normal;
-  }
-}
-
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
-
-  header ul {
-    width:99%;
-  }
-
-  header li, header ul li + li + li {
-    width:33%;
-  }
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
-}
