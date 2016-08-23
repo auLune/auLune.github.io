@@ -1,0 +1,53 @@
+timeFunction = cubic-bezier(0,.8,1,.2)
+
+body
+  background #232A3E
+
+.timeFunctions
+  display flex
+  color rgba(255,255,255,.2)
+  position absolute
+  font-size 12px
+  font-family monospace
+  .ease, .ease-in, .ease-out, .ease-in-out, .cubic-bezier
+    padding 16px 16px
+    transition color .5s ease
+    &:hover
+      cursor pointer
+  
+.cubic-bezier
+  color rgba(255,255,255,.8)
+  
+.dot
+  width 50px
+  height 50px
+  border-radius 50%
+  background #FF3048
+  position absolute
+  top 100%
+  left 0%
+  margin-top -50px
+  animation Anime 2s timeFunction alternate infinite
+  
+.wrap
+  width 50px
+  position absolute
+  height 100vh
+  left 0%
+  animation Anime2 2s linear alternate infinite
+  
+@keyframes Anime
+  0%
+    top 100%
+    margin-top -50px
+  100%
+    top 0%
+    margin-top 0px
+      
+@keyframes Anime2
+  0%
+    left 0%
+    margin-left 0px
+  100%
+    left 100%
+    margin-left -50px
